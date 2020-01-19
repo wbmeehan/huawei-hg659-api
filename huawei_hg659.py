@@ -273,7 +273,7 @@ def disconnect_all_hosts():
     
 
     for host in hostList:
-        if (host[1] != currentMACAddress and host[1] != "0C:56:5C:89:D1:26"):
+        if (host[1] != currentMACAddress):
             result = disconnect_host(host[0], host[1])
             if result == 1:
                 print("Disconnected: " + host[1])
