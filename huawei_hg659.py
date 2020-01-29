@@ -3,8 +3,6 @@ import hashlib
 import base64
 import re
 
-#Enter WiFi MAC address for device running the script here
-currentMACAddress = "E4:A7:A0:BB:A1:CA"
 #Enter router interface login details here
 username = "admin"
 password = "admin@HG659"
@@ -273,12 +271,11 @@ def disconnect_all_hosts():
     
 
     for host in hostList:
-        if (host[1] != currentMACAddress):
-            result = disconnect_host(host[0], host[1])
-            if result == 1:
-                print("Disconnected: " + host[1])
-            elif result == 0:
-                print("Failed to disconnect: " + host[1])
+        result = disconnect_host(host[0], host[1])
+        if result == 1:
+            print("Disconnected: " + host[1])
+        elif result == 0:
+             print("Failed to disconnect: " + host[1])
 
     router_logout()
 
