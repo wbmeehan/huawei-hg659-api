@@ -5,8 +5,8 @@ An API for Huawei HG659 modems allowing you to automatically remove entries from
 **With this firmware devices may fail to connect once the device list count reaches 32, and deleting devices from the list and rebooting is the only way to reliably address this issue.**
 
 How to use:
-- In the python script substitute your router login and password.
+- In the python script substitute your router login, password and the WiFI MAC address for the device running the script.
 - There is a main function included demonstrating how to use the API.
-- This script should be scheduled to run at a regular interval.
+- You could run this script at a regular interval using Windows Task Scheduler.
 
 Note: This script has only been tested with the aforementioned firmware version.
